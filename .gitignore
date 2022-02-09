@@ -1,0 +1,8 @@
+.vscode/
+.idea/
+_/
+.jest
+.env
+.vault
+node_modules/
+npm-debug.log
