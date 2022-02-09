@@ -7,7 +7,7 @@ export function getResolver(url: string): Record<string, DIDResolver> {
     let didDocumentMetadata = {}
 
     try {
-      const response = await fetch(`${url}/did/${did}`)
+      const response = await fetch(`${url}/1.0/identifiers/${did}`)
       const result = await response.json()
       didDocument = result.didDoc
       didDocumentMetadata = result.metadata
