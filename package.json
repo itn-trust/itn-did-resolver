@@ -2,7 +2,11 @@
   "name": "itn-did-resolver",
   "version": "0.0.1",
   "description": "Resolve DID documents for ITN Decentralized Identifiers",
-  "main": "_/index.js",
+  "main": "_/src/resolver.js",
+  "homepage": "https://github.com/mobi-dlt/itn-did-resolver#readme",
+  "bugs": {
+    "url": "https://github.com/mobi-dlt/itn-did-resolver/issues"
+  },
   "keywords": [
     "itn",
     "did",
@@ -10,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:mobi-dlt/itn-did-resolver.git"
+    "url": "git+ssh://git@github.com/mobi-dlt/itn-did-resolver.git"
   },
   "author": "MOBI",
   "license": "Apache-2.0",
