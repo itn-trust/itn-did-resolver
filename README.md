@@ -28,26 +28,26 @@ A minimal DID Document might contain the following information:
   "@context": [
     "https://www.w3.org/ns/did/v1"
   ],
-  "id": "did:mobinet:5bFQ34F7kLe2bVzWP7te1j",
+  "id": "did:itn:5bFQ34F7kLe2bVzWP7te1j",
   "assertionMethod": [
-    "did:mobinet:5bFQ34F7kLe2bVzWP7te1j#c4e60db9161a36efeb0b866c3503ec3c5b429bd156dd7b30c64bea8efb54cf35"
+    "did:itn:5bFQ34F7kLe2bVzWP7te1j#c4e60db9161a36efeb0b866c3503ec3c5b429bd156dd7b30c64bea8efb54cf35"
   ],
   "authentication": [
-    "did:mobinet:5bFQ34F7kLe2bVzWP7te1j#c4e60db9161a36efeb0b866c3503ec3c5b429bd156dd7b30c64bea8efb54cf35"
+    "did:itn:5bFQ34F7kLe2bVzWP7te1j#c4e60db9161a36efeb0b866c3503ec3c5b429bd156dd7b30c64bea8efb54cf35"
   ],
   "keyAgreement": [
     {
-      "id": "did:mobinet:5bFQ34F7kLe2bVzWP7te1j#5e367434275dd5f4d6a0eeb2b5a22710b588288fa5ec165e2bdb9a8e7b6e176c",
+      "id": "did:itn:5bFQ34F7kLe2bVzWP7te1j#5e367434275dd5f4d6a0eeb2b5a22710b588288fa5ec165e2bdb9a8e7b6e176c",
       "type": "X25519KeyAgreementKey2019",
-      "controller": "did:mobinet:5bFQ34F7kLe2bVzWP7te1j",
+      "controller": "did:itn:5bFQ34F7kLe2bVzWP7te1j",
       "publicKeyBase58": "Hz1Vip4r2MNFFkW7TLQvLLKjK3AnfSNNBypmvUvvSbcc"
     }
   ],
   "verificationMethod": [
     {
-      "id": "did:mobinet:5bFQ34F7kLe2bVzWP7te1j#c4e60db9161a36efeb0b866c3503ec3c5b429bd156dd7b30c64bea8efb54cf35",
+      "id": "did:itn:5bFQ34F7kLe2bVzWP7te1j#c4e60db9161a36efeb0b866c3503ec3c5b429bd156dd7b30c64bea8efb54cf35",
       "type": "Ed25519VerificationKey2018",
-      "controller": "did:mobinet:5bFQ34F7kLe2bVzWP7te1j",
+      "controller": "did:itn:5bFQ34F7kLe2bVzWP7te1j",
       "publicKeyBase58": "BPJgF3sz49umG4JrAR2Um7juqVfAUDqTLGjRYmV3oDxe"
     }
   ]
@@ -63,7 +63,7 @@ import { Resolver } from 'did-resolver'
 import { getResolver } from 'itn-did-resolver'
 
 // getResolver() accepts a DID Resolver server url
-const itnResolver = getResolver("https://resolver.mobinet.dev")
+const itnResolver = getResolver("https://resolver.itn.mobi")
 
 const didResolver = new Resolver({
     ...itnResolver
