@@ -1,16 +1,18 @@
-import { DIDResolutionResult, DIDResolver, DIDDocument } from "did-resolver"
-globalThis.fetch = require("node-fetch")
+import {DIDResolutionResult, DIDResolver, DIDDocument, DIDResolutionMetadata, DIDDocumentMetadata} from "did-resolver"
 
 export function getResolver(url: string): Record<string, DIDResolver> {
   async function resolve(did: string): Promise<DIDResolutionResult> {
     let didDocument: DIDDocument | null = null
-    let didDocumentMetadata = {}
+    let didDocumentMetadata: DIDDocumentMetadata = {}
+    let didResolutionMetadata: DIDResolutionMetadata = {}
 
     try {
       const response = await fetch(`${url}/1.0/identifiers/${did}`)
-      const result = await response.json()
-      didDocument = result.didDoc
-      didDocumentMetadata = result.metadata
+      const result = await response.json() as DIDResolutionResult
+      didDocument = result.didDocument
+      didDocumentMetadata = result.didDocumentMetadata
+      didResolutionMetadata = result.didResolutionMetadata
+
       if (!didDocument) {
         return getResolutionError(
           "notFound",
@@ -40,7 +42,7 @@ export function getResolver(url: string): Record<string, DIDResolver> {
     return {
       didDocument,
       didDocumentMetadata,
-      didResolutionMetadata: { contentType },
+      didResolutionMetadata: { ...didResolutionMetadata, contentType },
     }
   }
 

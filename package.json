@@ -1,11 +1,15 @@
 {
   "name": "itn-did-resolver",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "type": "module",
   "description": "Resolve DID documents for ITN Decentralized Identifiers",
   "main": "_/src/resolver.js",
   "homepage": "https://github.com/mobi-dlt/itn-did-resolver#readme",
   "bugs": {
     "url": "https://github.com/mobi-dlt/itn-did-resolver/issues"
+  },
+  "scripts": {
+    "compile": "tsc -b -w"
   },
   "keywords": [
     "itn",
@@ -16,14 +20,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/mobi-dlt/itn-did-resolver.git"
   },
-  "author": "MOBI",
+  "author": "ITN",
   "license": "Apache-2.0",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
-  },
   "devDependencies": {
-    "@types/node-fetch": "^2.5.12",
-    "typescript": "4.2.3",
-    "did-resolver": "^3.1.0"
+    "typescript": "5.2.2",
+    "did-resolver": "4.1.0"
   }
 }
