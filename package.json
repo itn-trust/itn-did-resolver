@@ -1,6 +1,6 @@
 {
   "name": "itn-did-resolver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Resolve DID documents for ITN Decentralized Identifiers",
   "main": "_/src/resolver.js",
@@ -23,7 +23,8 @@
   "author": "ITN",
   "license": "Apache-2.0",
   "devDependencies": {
-    "typescript": "5.2.2",
-    "did-resolver": "4.1.0"
+    "typescript": "5.5.4",
+    "did-resolver": "4.1.0",
+    "prettier": "3.3.3"
   }
 }
